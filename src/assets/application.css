@@ -1,0 +1,53 @@
+/* reset css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-page-background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+  color: var(--color-text);
+}
+
+ul,
+ol,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* basic setting */
+:root {
+  --color-lightgary: #f0f0f5;
+  --color-primary: #f67599;
+  --color-page-background: #fff;
+  --color-text: #2a2a2a;
+  --color-footer-background: #f6f7f8;
+  --color-footer-text: #808080;
+  --color-stepper-background: #fff;
+  --color-stepper-check-backgorund: #333333;
+  --color-stepper-border: #2a2a2a;
+  --color-stepper-line: #000;
+  --color-shopping-car-background: #fff;
+  --color-shopping-car-calc-background: #f0f0f5;
+  --color-input-radio: #2a2a2a;
+}

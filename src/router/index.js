@@ -1,22 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import CheckoutArea from '../views/CheckoutArea.vue'
+import AddressPanel from '../views/AddressPanel.vue'
+import TransportPanel from '../views/TransportPanel.vue'
+import PaymentPanel from '../views/PaymentPanel.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    name: 'checkout-area',
+    component: CheckoutArea,
+    children: [
+      {
+        path: '',
+        component: AddressPanel
+      },
+      {
+        path: 'transport',
+        component: TransportPanel
+      },
+      {
+        path: 'payment',
+        component: PaymentPanel
+      }
+    ]
   }
 ]
 
